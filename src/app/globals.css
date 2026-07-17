@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #060504;
+  --color-coal: #0d0a07;
+  --color-onyx: #17120a;
+  --color-gold: #d4af37;
+  --color-gold-light: #f1d27a;
+  --color-gold-soft: #e8c468;
+  --color-gold-deep: #8a6d1f;
+  --color-ivory: #f6f0e3;
+  --color-sand: #a89f8d;
+
+  --font-serif: var(--font-cormorant), "Georgia", serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-shimmer: shimmer 3.2s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.55; }
+    80%, 100% { transform: scale(1.9); opacity: 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes shimmer {
+    from { background-position: 200% center; }
+    to { background-position: -200% center; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-ivory);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Global overflow prevention */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ensure images/videos don't overflow */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  /* Reduce padding on mobile for better content space */
+  .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-12 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  .sm\:px-12 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  
+  /* Ensure touch targets are at least 44px */
+  button, a[href], .btn {
+    min-height: 44px;
+  }
+  
+  /* Prevent zoom on input focus (iOS) */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  /* Better text sizing on very small screens */
+  h1 { font-size: clamp(2rem, 8vw, 4rem) !important; }
+  h2 { font-size: clamp(1.5rem, 6vw, 3rem) !important; }
+  
+  /* Reduce hero padding */
+  .hero { padding-top: 6rem !important; padding-bottom: 3rem !important; }
+  
+  /* Stack buttons vertically on small screens */
+  .btn-row { flex-direction: column !important; width: 100%; }
+  .btn-row .btn, .btn-row .btn-o { width: 100%; justify-content: center; }
+}
+
+/* Very small screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  .px-6 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+  h1 { font-size: clamp(1.8rem, 7vw, 3rem) !important; }
+}
+
+/* Prevent horizontal overflow on all elements */
+* {
+  max-width: 100%;
+}
+
+/* Ensure images don't overflow containers */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: #060504;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0a07;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8a6d1f, #d4af37);
+  border-radius: 99px;
+}
+
+/* Cinematic film grain overlay */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -100%;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 9s steps(10) infinite;
+}
+@keyframes grain-shift {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-4%, -6%); }
+  30% { transform: translate(5%, -3%); }
+  50% { transform: translate(-6%, 7%); }
+  70% { transform: translate(7%, 2%); }
+  90% { transform: translate(-3%, 5%); }
+}
+
+/* Champagne gold gradient text with slow shimmer */
+.text-gold-gradient {
+  background: linear-gradient(
+    100deg,
+    #8a6d1f 0%,
+    #d4af37 25%,
+    #f9e9b8 50%,
+    #d4af37 75%,
+    #8a6d1f 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Hairline gold rule */
+.gold-hairline {
+  background: linear-gradient(90deg, transparent, #d4af37 30%, #f1d27a 50%, #d4af37 70%, transparent);
+  height: 1px;
+}
+
+/* Outlined display text */
+.text-outline-gold {
+  -webkit-text-stroke: 1px rgba(212, 175, 55, 0.55);
+  color: transparent;
+}
+
+/* Gold button sheen sweep */
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 25%, rgba(255, 255, 255, 0.55) 50%, transparent 75%);
+  background-size: 250% 100%;
+  background-position: 120% 0;
+  transition: background-position 0.9s ease;
+}
+.btn-sheen:hover::before {
+  background-position: -120% 0;
+}
+
+/* Form fields */
+.field {
+  width: 100%;
+  background: rgba(6, 5, 4, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  padding: 0.85rem 1rem;
+  color: var(--color-ivory);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.field::placeholder {
+  color: rgba(168, 159, 141, 0.55);
+}
+.field:focus {
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+select.field option {
+  background: #0d0a07;
+  color: var(--color-ivory);
+}
+input[type="date"].field::-webkit-calendar-picker-indicator {
+  filter: invert(80%) sepia(45%) saturate(400%) hue-rotate(-15deg);
+  cursor: pointer;
+}

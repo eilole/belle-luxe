@@ -1,0 +1,32 @@
+{
+  "name": "Belle Luxe by Kim",
+  "short_name": "Belle Luxe",
+  "description": "Luxury beauty salon — hair, makeup, lashes, nails & admin studio",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#060504",
+  "theme_color": "#d4af37",
+  "categories": ["lifestyle", "beauty", "business"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.belleluxe.app",
+      "id": "com.belleluxe.app"
+    }
+  ]
+}

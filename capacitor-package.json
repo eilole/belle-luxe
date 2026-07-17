@@ -1,0 +1,15 @@
+{
+  "name": "belle-luxe",
+  "displayName": "Belle Luxe",
+  "version": "1.0.0",
+  "description": "Belle Luxe by Kim — Luxury Beauty Salon App",
+  "homepage": "https://belleluxebykim.vercel.app",
+  "author": {
+    "name": "Kim — Belle Luxe",
+    "email": "kim@belleluxe.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/belle-luxe"
+  }
+}
