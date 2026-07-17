@@ -1,8 +1,14 @@
 {
+  "version": 2,
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
+  "outputDirectory": ".next",
   "framework": "nextjs",
+  "installCommand": "npm install",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "ADMIN_PASSWORD": "@admin_password"
+  },
   "regions": ["fra1"],
   "functions": {
     "src/app/api/**/*.ts": {

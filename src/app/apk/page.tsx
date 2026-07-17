@@ -107,23 +107,6 @@ npx cap open android  # Build APK from Android Studio`}
           </section>
         </div>
 
-        {/* Download card */}
-        <section className="mt-14 border border-gold/30 bg-gradient-to-br from-coal/80 to-ink/80 p-8 text-center">
-          <p className="text-[10px] font-bold uppercase tracking-[0.45em] text-gold">Ready-to-build package</p>
-          <h3 className="mt-3 font-serif text-2xl text-ivory">
-            Download the <span className="text-gold-gradient italic">Capacitor Project</span>
-          </h3>
-          <p className="mt-3 text-sm text-sand">
-            ZIP file with Capacitor config + Android resources + build script — produces a real <code>.apk</code> in one command.
-          </p>
-          <a
-            href="/download-app"
-            className="btn-sheen mt-6 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.28em] text-ink shadow-[0_10px_40px_rgba(212,175,55,0.3)] transition-transform hover:scale-[1.04]"
-          >
-            📦 Open Download Page
-          </a>
-        </section>
-
         <div className="mt-14 border-t border-gold/15 pt-8 text-center">
           <p className="font-serif text-sm italic text-sand">
             The salon is already a web app — these options simply wrap it.

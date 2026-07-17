@@ -293,7 +293,7 @@ export function AdminDashboard() {
                     </div>
 
                     {/* Actions */}
-                    <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center sm:gap-2">
+                    <div className="flex shrink-0 flex-wrap items-center gap-2">
                       <a
                         href={whatsappLink(
                           `Hello ${b.name}! This is Kim from Belle Luxe regarding your ${getServiceLabel(
@@ -302,7 +302,7 @@ export function AdminDashboard() {
                         )}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="grid h-11 w-11 sm:h-9 sm:w-9 place-items-center rounded-full border border-gold/40 text-gold transition-colors hover:bg-gold/10 bg-ink/40"
+                        className="grid h-9 w-9 place-items-center rounded-full border border-gold/30 text-gold transition-colors hover:bg-gold/10"
                         title="Message on WhatsApp"
                         onClick={() => {
                           void phoneDigits(b.phone);
@@ -315,7 +315,7 @@ export function AdminDashboard() {
                         <button
                           disabled={busyId === b.id}
                           onClick={() => updateStatus(b.id, "confirmed")}
-                          className="rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-5 py-3 sm:py-2 text-[11px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-transform hover:scale-105 disabled:opacity-50 shadow-lg shadow-gold/20"
+                          className="rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-transform hover:scale-105 disabled:opacity-50"
                         >
                           Confirm
                         </button>
@@ -324,7 +324,7 @@ export function AdminDashboard() {
                         <button
                           disabled={busyId === b.id}
                           onClick={() => updateStatus(b.id, "completed")}
-                          className="rounded-full border border-emerald-300/40 px-5 py-3 sm:py-2 text-[11px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-200 transition-colors hover:bg-emerald-300/10 disabled:opacity-50 bg-coal/30"
+                          className="rounded-full border border-emerald-300/40 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-200 transition-colors hover:bg-emerald-300/10 disabled:opacity-50"
                         >
                           Complete
                         </button>
@@ -333,7 +333,7 @@ export function AdminDashboard() {
                         <button
                           disabled={busyId === b.id}
                           onClick={() => updateStatus(b.id, "cancelled")}
-                          className="grid h-11 w-11 sm:h-9 sm:w-9 place-items-center rounded-full border-2 border-red-300/40 text-red-200 transition-colors hover:bg-red-300/15 disabled:opacity-50 bg-ink/40"
+                          className="grid h-9 w-9 place-items-center rounded-full border border-red-300/30 text-red-200 transition-colors hover:bg-red-300/10 disabled:opacity-50"
                           title="Cancel"
                         >
                           <XCircle className="h-4 w-4" strokeWidth={1.75} />
@@ -342,7 +342,7 @@ export function AdminDashboard() {
                       <button
                         disabled={busyId === b.id}
                         onClick={() => remove(b.id)}
-                        className="grid h-11 w-11 sm:h-9 sm:w-9 place-items-center rounded-full border-2 border-gold/15 text-sand transition-colors hover:border-red-300/40 hover:text-red-200 disabled:opacity-50 bg-ink/40"
+                        className="grid h-9 w-9 place-items-center rounded-full border border-gold/15 text-sand transition-colors hover:border-red-300/40 hover:text-red-200 disabled:opacity-50"
                         title="Delete"
                       >
                         <Trash2 className="h-4 w-4" strokeWidth={1.75} />

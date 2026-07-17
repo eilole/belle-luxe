@@ -50,7 +50,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 60, filter: "blur(12px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1.2, delay: 0.55, ease: EASE }}
-            className="block text-[15vw] uppercase tracking-[0.04em] text-ivory sm:text-[11vw] lg:text-[8.5rem]"
+            className="block text-[clamp(3.5rem,15vw,10rem)] uppercase tracking-[0.04em] text-ivory sm:text-[11vw] lg:text-[8.5rem]"
           >
             Belle
           </motion.span>
@@ -58,7 +58,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 60, filter: "blur(12px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1.2, delay: 0.75, ease: EASE }}
-            className="text-gold-gradient block text-[15vw] uppercase tracking-[0.04em] sm:text-[11vw] lg:text-[8.5rem]"
+            className="text-gold-gradient block text-[clamp(3.5rem,15vw,10rem)] uppercase tracking-[0.04em] sm:text-[11vw] lg:text-[8.5rem]"
           >
             Luxe
           </motion.span>

@@ -143,12 +143,6 @@ export function Footer() {
           >
             Salon Admin
           </a>
-          <a
-            href="/download-app"
-            className="mt-2 text-[10px] uppercase tracking-[0.3em] text-sand/50 transition-colors hover:text-gold"
-          >
-            Download App
-          </a>
         </div>
       </div>
     </footer>

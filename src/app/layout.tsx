@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
@@ -20,14 +20,6 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
-  themeColor: "#d4af37",
-};
-
 export const metadata: Metadata = {
   title: "Belle Luxe by Kim — Luxury Beauty Salon",
   description:
@@ -46,6 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
       <head>
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#d4af37" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Belle Luxe" />

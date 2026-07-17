@@ -37,7 +37,7 @@ export function InstallPrompt() {
   if (!prompt || dismissed) return null;
 
   return (
-    <div className="fixed bottom-20 left-4 right-4 z-[60] flex items-center justify-between rounded-2xl border border-gold/30 bg-ink/95 px-5 py-4 shadow-[0_15px_45px_rgba(0,0,0,0.7)] backdrop-blur-xl md:bottom-6 md:right-6 md:left-auto md:max-w-md md:rounded-full md:px-6 md:py-3 md:shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+    <div className="fixed bottom-24 left-4 right-4 z-[60] flex items-center justify-between rounded-2xl border border-gold/30 bg-ink/95 px-5 py-4 shadow-[0_15px_45px_rgba(0,0,0,0.7)] backdrop-blur-xl md:right-6 md:left-auto md:max-w-md md:rounded-full md:px-6 md:py-3 md:shadow-[0_20px_50px_rgba(0,0,0,0.6)] md:bottom-28">
       <div className="flex items-center gap-3">
         <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold/40 bg-gold/10">
           <Download className="h-4 w-4 text-gold" strokeWidth={1.75} />

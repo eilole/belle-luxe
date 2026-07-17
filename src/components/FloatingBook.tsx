@@ -15,7 +15,7 @@ export function FloatingBook() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-[80] flex flex-col items-end gap-3">
+    <div className="fixed bottom-20 right-6 z-[80] flex flex-col items-end gap-3 md:bottom-6">
       {open && (
         <motion.div
           initial={{ opacity: 0, y: 16, scale: 0.96 }}
