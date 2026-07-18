@@ -42,23 +42,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 }
 import type { Metadata } from 'next'
 import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'Belle Luxe by Kim | Salon ya Kucha na Urembo Dar es Salaam',
-  description: 'Pata huduma bora za Gel, Acrylics, nywele, makeups, Lashes na Kucha kwa Belle Luxe by Kim. Tunapatikana Dar es Salaam. Weka uteuzi leo via Instagram @belleluxebykim',
- keywords: ['salon dar es salaam', 'belle luxe kim', 'gel nails tanzania', 'kucha dar', 'beauty salon'],
-  verification: {
-   google:<meta name="google-site-verification" content="RCRgGC0xvtyv18ZdvpoteMC2OBRIHdmauGojlLKqzBM" />
- openGraph: {
-    title: 'Belle Luxe by Kim',
-    description: 'Salon ya nywele, Kucha na Urembo Dar es Salaam',
-    url: 'https://belleluxebykim.vercel.app',
-    siteName: 'Belle Luxe by Kim',
-    images: ['/og-image.jpg'],
-    type: 'website',
-  },
-}
-
 export default function RootLayout({
   children,
 }: {
