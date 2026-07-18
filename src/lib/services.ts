@@ -29,7 +29,7 @@ export const SERVICES: Service[] = [
   {
     id: "hair",
     index: "01",
-    title: "Hair",
+    title: "Hair/Nywele",
     tagline: "Premium Human Hair Styling",
     description:
       "From precision wig installs to silk-smooth presses — every strand is treated like royalty. We work exclusively with 100% premium human hair for a finish that moves, parts and shines like your own.",
@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
   {
     id: "lashes",
     index: "03",
-    title: "Lashes",
+    title: "Lashes/Kope",
     tagline: "Captivating Eye Enhancements",
     description:
       "Weightless, custom-mapped lash sets that frame your gaze — from a natural wisp to full mega-volume drama. Every set is designed around your eye shape for comfort that lasts.",
@@ -103,7 +103,7 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    id: "nails",
+    id: "nails/Kucha",
     index: "04",
     title: "Nails",
     tagline: "Luxury Nail Artistry",
