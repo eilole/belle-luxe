@@ -135,7 +135,7 @@ export function KimSection() {
           <Reveal delay={0.08}>
             <h2 className="mt-5 font-serif text-4xl font-light leading-[1.08] text-ivory sm:text-5xl">
               Every Queen Deserves{" "}
-              <span className="text-gold-gradient italic">a Kim</span>
+              <span className="text-gold-gradient italic">a King</span>
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
